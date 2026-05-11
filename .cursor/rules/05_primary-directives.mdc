@@ -1,0 +1,75 @@
+---
+description: Primary directives and precedence for AI assistants in learn-numpy-2026
+globs: ["**/*"]
+alwaysApply: true
+---
+
+# Primary Directives
+
+These directives apply to all AI assistant interactions in this repository.
+
+## Precedence Order
+
+When instructions conflict, apply in this order (highest to lowest):
+
+1. Explicit instruction in the current user message.
+2. Root `CLAUDE.md` and root `AGENTS.md`.
+3. `.cursor/rules/` rule files (this file and siblings).
+4. `.github/copilot-instructions.md`.
+5. `.claude/AGENTS.md` and `.claude/skills.md`.
+6. `skills.md` at repository root.
+7. Model defaults.
+
+---
+
+## Naming and Numbering Conventions
+
+- Numbered learning artifacts use a two-digit prefix: `01_name.py`, `01-arrays.ipynb`, `01-topic/`.
+- **Numbers start at `01`, never `00`.** Files or folders prefixed `00_` or `00-` are forbidden.
+- Unnumbered support folders (`datasets/`, `references/`, `notes/` at repo root) carry no numeric prefix unless you intentionally sequence them.
+
+---
+
+## Minimal-Edit Principle
+
+Make targeted, minimal changes. Read the full file before editing.
+If a change feels broad or risky, ask first.
+Do not refactor or restructure beyond the explicit task scope.
+
+## Structural Preservation
+
+Do not reorder sections, rename headings, or restructure established notebooks or docs without
+approval when learner progression depends on that order.
+
+## Topic Placement
+
+Route new notebooks, exercises, and notes to the next free number or a clearly named new topic.
+Do not overwrite completed milestone content without maintainer approval in the current task.
+
+---
+
+## Do Not Surface Internal Process in Publish-Facing Docs
+
+Intake policy (source-material, zero-copy workflow) is for contributors and assistants only.
+Do not paste full intake checklists or internal policy blocks into README, learner-facing notes,
+or notebook markdown cells as official curriculum policy.
+
+Brief factual notes (e.g. that `source-material/` may exist locally and is gitignored) are fine
+in README.
+
+---
+
+## Validation Before Finishing (code-touching tasks)
+
+When the repo contains Python under `src/`, `exercises/`, or `tests/`:
+
+- `ruff check src exercises tests` (or the narrowest path that covers edited files)
+- `python -m compileall -q src exercises tests`
+- `pytest` when `tests/` exists and has tests
+
+For markdown:
+
+- `npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "notes/**/*.md"`
+  (adjust globs if folders are absent; repo root `README.md` always applies)
+
+Skip commands that do not apply to the files you changed (e.g. no `tests/` yet).

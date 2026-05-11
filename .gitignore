@@ -427,3 +427,6 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+
+# Internal instructor / author intake (optional local folder)
+source-material/

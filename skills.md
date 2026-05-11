@@ -1,29 +1,28 @@
 # skills.md
 
-Repository-level skill index for contributors and AI assistants.
+Repository-level skill index for contributors and AI assistants — **Learn NumPy (2026)**.
 
 ## Core Skills
 
-1. Educational content design for beginner Python (30-minute session blocks).
-2. Zero-copy transformation workflow from instructor intake notes.
-3. Session-to-practice alignment (`docs/sessions/L{level}/S{session}.md` <-> `src/L{level}/S{session}/`).
-4. Markdown quality and link integrity checks.
-5. Python quality checks with pedagogy-aware lint policy.
-6. Session-bucketing discipline for new content (planned/new sessions first).
+1. **NumPy fundamentals** — ndarray creation, indexing, slicing, reshaping, views vs copies.
+2. **Broadcasting and vectorization** — teach loop-free patterns with small, inspectable arrays.
+3. **Notebook-first learning** — one main idea per section; reproducible `default_rng(seed)`.
+4. **Exercise scripts** — `exercises/01_*.py` style; runnable from repo root with `uv run`.
+5. **Tests for helpers** — when `src/` grows logic, mirror with `tests/test_*.py`.
+6. **Markdown quality** — headings, links, and `markdownlint-cli2` on paths listed in `AGENTS.md`.
+7. **Zero-copy intake** — transform private `source-material/`; never ship verbatim source text.
 
 ## Guardrails
 
-- Treat `source-material/` as an internal, read-only intake folder (often gitignored locally; not
-  guaranteed in every clone).
-- Do not copy source text verbatim into publish-facing documentation.
-- Keep references on formal curriculum paths, not sandbox paths.
-- Default new additions to planned/new sessions; do not inject into completed sessions without explicit user permission.
-- **`src/Working/` is hands-off:** do not modify anything under `src/Working/` unless Swamy explicitly requests that path or folder in the current task; prefer formal `src/L{level}/S{session}/` and `docs/sessions/` for changes.
+- Treat optional **`source-material/`** as internal; do not reference it in public-facing docs.
+- **No `00_` numbered** learning files; start at **`01`**.
+- Do not paste internal agent policy blocks into README or notebooks; keep policy in
+  `AGENTS.md`, `.cursor/rules/`, `.github/`, `.claude/`.
 
 ## Policy vs runnable skills
 
-Intake and zero-copy expectations are expressed in **repository instructions** (root `AGENTS.md`,
-`CLAUDE.md`, `.github/copilot-instructions.md`, `.cursor/rules/`, `.claude/AGENTS.md`,
-`.claude/rules/`) — not as a separate installable skill file dedicated only to `source-material/`.
-Treat this `skills.md` file as the **canonical skill index**; `.claude/skills.md` extends it for
-Claude Code usage notes.
+Intake and originality expectations live in **repository instruction files** (`AGENTS.md`,
+`CLAUDE.md`, `.github/copilot-instructions.md`, `.cursor/rules/`, `.claude/`) — not in a separate
+installable skill binary.
+
+Root **`skills.md`** is the canonical index; **`.claude/skills.md`** extends it for Claude Code.
