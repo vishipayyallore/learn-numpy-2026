@@ -1,0 +1,15 @@
+# Markdownlint defaults for educational notes (aligned with learn-numpy-2026 style).
+
+default: true
+
+MD013: false
+MD060: false
+MD032: false
+MD040: false
+MD036: false
+
+# README uses multiple H1-style sections (author's style).
+MD025: false
+
+# Ordered lists may use explicit 1. 2. 3. numbering.
+MD029: false
