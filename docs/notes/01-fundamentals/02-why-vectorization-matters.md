@@ -1,4 +1,4 @@
-# From Python Loops To NumPy
+# Why Vectorization Matters
 
 This note shows why NumPy is preferred for numerical operations.
 
@@ -71,3 +71,8 @@ NumPy gives:
 Use plain Python loops when learning fundamentals or handling general-purpose logic.
 
 Use NumPy arrays when working with numerical vectors and matrices, especially when operations apply to entire arrays.
+
+## Related Artifacts
+
+- Executable companion: `src/fundamentals/loop_vs_vectorized.py`
+- Prior note in this track: `01-what-is-numpy.md`

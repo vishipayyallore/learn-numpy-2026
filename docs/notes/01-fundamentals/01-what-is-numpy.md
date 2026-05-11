@@ -1,4 +1,4 @@
-# NumPy Introduction
+# What Is NumPy?
 
 NumPy is the core numerical computing library in Python.
 
@@ -57,3 +57,8 @@ That approach gives us:
 NumPy is not just another package.
 
 It is the foundation for numerical work in Python, and learning it early makes later topics like pandas, machine learning, and linear algebra much easier.
+
+## Related Artifacts
+
+- Executable companion: `src/fundamentals/loop_vs_vectorized.py`
+- Next note in this track: `02-why-vectorization-matters.md`

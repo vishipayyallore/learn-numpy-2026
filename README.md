@@ -30,35 +30,52 @@ The goal of this repository is not only to learn NumPy APIs, but also to develop
 
 # Repository Structure
 
-```text id="c2xv7e"
+Content is organized in layers so you can answer “where is the idea?” and “where do I run it?” without relying on calendar-style folders.
+
+| Layer | Role |
+| --- | --- |
+| Conceptual | `docs/notes/` — theory, comparisons, summaries (topic folders, co-located `images/` per topic when needed) |
+| Interactive | `notebooks/` — runnable walkthroughs, same topic numbering as notes |
+| Executable | `src/` — small scripts by domain (`fundamentals/`, `experiments/`, `mini_projects/`, `utils/`) |
+| Practice | `exercises/` — short drills (`01_` naming when you add scripts) |
+| Reference | `docs/diagrams/`, `docs/cheatsheets/`, repo `README` and external docs |
+| Data | `datasets/` — tiny files for examples |
+| Quality | `tests/` — checks for non-trivial `src/` helpers |
+
+Suggested flow for a new topic: read the matching note under `docs/notes/…`, try the notebook folder, run or extend code under `src/…`, then reinforce in `exercises/`.
+
+```text
 learn-numpy-2026/
 │
+├── docs/
+│   ├── notes/
+│   │   ├── 01-fundamentals/
+│   │   ├── 02-array-operations/    (add as topics grow)
+│   │   ├── 03-broadcasting/
+│   │   └── ...
+│   ├── diagrams/
+│   ├── cheatsheets/
+│   └── images/
+│
 ├── notebooks/
-│   ├── 01-arrays.ipynb
-│   ├── 02-indexing-slicing.ipynb
-│   ├── 03-broadcasting.ipynb
-│   ├── 04-reshape-transpose.ipynb
-│   └── ...
+│   ├── 01-fundamentals/
+│   ├── 02-array-operations/
+│   ├── 03-broadcasting/
+│   └── 04-linear-algebra/
 │
 ├── src/
-│   ├── array_utils.py
-│   ├── statistics_utils.py
-│   ├── matrix_operations.py
-│   └── ...
+│   ├── fundamentals/
+│   ├── experiments/
+│   ├── mini_projects/
+│   └── utils/
 │
 ├── exercises/
-│   ├── exercise_01.py
-│   ├── exercise_02.py
-│   └── ...
-│
 ├── datasets/
-│
 ├── tests/
-│
-├── notes/
-│
 └── README.md
 ```
+
+Optional local intake notes stay out of version control; see `.gitignore` if you use that workflow.
 
 ---
 

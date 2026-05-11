@@ -1,4 +1,4 @@
-"""Day 1 sample: range basics and NumPy vectorized multiplication."""
+"""Fundamentals: range basics and NumPy vectorized multiplication."""
 
 import numpy as np
 
