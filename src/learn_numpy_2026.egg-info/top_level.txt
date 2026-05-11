@@ -1,0 +1,5 @@
+01-fundamentals
+02-array-operations
+03-broadcasting
+04-reshape
+05-linear-algebra

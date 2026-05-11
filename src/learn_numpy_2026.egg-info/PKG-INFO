@@ -1,3 +1,16 @@
+Metadata-Version: 2.4
+Name: learn-numpy-2026
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=2.0.0
+Provides-Extra: dev
+Requires-Dist: pytest>=8.0.0; extra == "dev"
+Requires-Dist: ruff>=0.11.0; extra == "dev"
+Dynamic: license-file
+
 # Learn Numpy in 2026
 
 > A structured hands-on journey to learn NumPy through notebooks, exercises, topic-organized `src/` scripts, and real-world numerical computing examples.
