@@ -11,7 +11,7 @@ This repo is a **personal / cohort learning** space for NumPy in 2026. Typical l
 `README.md` for the authoritative tree):
 
 - `notebooks/` — concept walkthroughs (`01-…`, `02-…`, numbering starts at **01**).
-- `src/<topic>/` — runnable learning scripts (topic folders; optional `journal/` for dated progress).
+- `src/NN-topic/` — runnable learning scripts (numbered folders aligned with `docs/notes/` and `notebooks/`; optional `journal/` for dated progress).
 - `exercises/` — practice scripts.
 - `tests/` — checks for non-trivial library code in `src/`.
 - `notes/` or `docs/` — markdown explanations (create as needed).

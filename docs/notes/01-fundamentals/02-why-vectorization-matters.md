@@ -74,5 +74,5 @@ Use NumPy arrays when working with numerical vectors and matrices, especially wh
 
 ## Related Artifacts
 
-- Executable companion: `src/fundamentals/01-loop-vs-vectorized.py`
+- Executable companion: `src/01-fundamentals/01-loop-vs-vectorized.py`
 - Prior note in this track: `01-what-is-numpy.md`

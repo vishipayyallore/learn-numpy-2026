@@ -30,20 +30,20 @@ The goal of this repository is not only to learn NumPy APIs, but also to develop
 
 # Repository Structure
 
-Content is organized in layers so you can answer “where is the idea?” and “where do I run it?” without `day1/` / `day2/` folders. **Topics** live in directory names; **order** inside a topic uses `01-`, `02-`, … (or date-prefixed filenames). **Day-to-day progress** is optional but encouraged in `journal/YYYY-MM-DD.md`, which can link to whatever you touched that day.
+Content is organized in layers so you can answer “where is the idea?” and “where do I run it?” without `day1/` / `day2/` folders. **`docs/notes/`, `notebooks/`, and `src/` share the same numbered topic folders** (`01-fundamentals` … `05-linear-algebra`) so progression and navigation stay aligned. Inside each topic, scripts use `01-`, `02-`, … for a clear reading order. **Day-to-day progress** belongs in `journal/YYYY-MM-DD.md` (not in `.py` filenames unless you deliberately want that style).
 
 | Layer | Role |
 | --- | --- |
 | Conceptual | `docs/notes/` — theory, comparisons, summaries (topic folders, co-located `images/` per topic when needed) |
 | Interactive | `notebooks/` — runnable walkthroughs, same topic numbering as notes |
-| Executable | `src/<topic>/` — runnable scripts (e.g. `01-…py`); run with `python path/to/script.py` (leading digits are for humans, not import paths) |
+| Executable | `src/NN-topic/` — runnable scripts (e.g. `01-…py`); run with `python path/to/script.py` (leading digits are for humans, not import paths) |
 | Chronology | `journal/` — dated log of programs run, notes read, and takeaways |
 | Practice | `exercises/` — short drills (`01_` naming when you add scripts) |
 | Reference | `docs/diagrams/`, `docs/cheatsheets/`, repo `README` and external docs |
 | Data | `datasets/` — tiny files for examples |
 | Quality | `tests/` — checks for non-trivial `src/` helpers |
 
-Suggested flow for a new topic: read the matching note under `docs/notes/…`, try the notebook folder, run or extend code under `src/<topic>/…`, optionally append `journal/`, then reinforce in `exercises/`.
+Suggested flow for a new topic: read the matching note under `docs/notes/NN-topic/`, try `notebooks/NN-topic/`, run or extend code under `src/NN-topic/`, optionally append `journal/`, then reinforce in `exercises/`.
 
 ```text
 learn-numpy-2026/
@@ -53,9 +53,10 @@ learn-numpy-2026/
 ├── docs/
 │   ├── notes/
 │   │   ├── 01-fundamentals/
-│   │   ├── 02-array-operations/    (add as topics grow)
+│   │   ├── 02-array-operations/
 │   │   ├── 03-broadcasting/
-│   │   └── ...
+│   │   ├── 04-reshape/
+│   │   └── 05-linear-algebra/
 │   ├── diagrams/
 │   ├── cheatsheets/
 │   └── images/
@@ -64,22 +65,23 @@ learn-numpy-2026/
 │   ├── 01-fundamentals/
 │   ├── 02-array-operations/
 │   ├── 03-broadcasting/
-│   └── 04-linear-algebra/
+│   ├── 04-reshape/
+│   └── 05-linear-algebra/
 │
 ├── src/
-│   ├── fundamentals/
-│   ├── indexing/
-│   ├── broadcasting/
-│   ├── reshape/
-│   ├── statistics/
-│   ├── linear_algebra/
-│   └── performance/
+│   ├── 01-fundamentals/
+│   ├── 02-array-operations/
+│   ├── 03-broadcasting/
+│   ├── 04-reshape/
+│   └── 05-linear-algebra/
 │
 ├── exercises/
 ├── datasets/
 ├── tests/
 └── README.md
 ```
+
+Add `06-…`, `07-…`, … under all three roots when you introduce statistics, random, performance, or larger projects.
 
 Optional local intake notes stay out of version control; see `.gitignore` if you use that workflow.
 
@@ -129,7 +131,7 @@ Optional local intake notes stay out of version control; see `.gitignore` if you
 This repository follows a hybrid learning model:
 
 * `.ipynb` notebooks for interactive exploration
-* `.py` scripts under `src/<topic>/` for disciplined coding practice (numbered or dated filenames inside each topic)
+* `.py` scripts under `src/NN-topic/` for disciplined coding practice (`01-`, `02-`, … inside each topic; dates only in `journal/` unless you choose otherwise)
 * `journal/` entries when you want a dated trail across topics
 * exercises for reinforcement
 * mini-projects for applied learning (as larger scripts or notebook sequences when you add them)

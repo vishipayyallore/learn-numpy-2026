@@ -32,7 +32,7 @@ If present (often gitignored), use it only as **inspiration**. Rewrite completel
 Authoritative detail: root **`README.md`**. Typical areas:
 
 - `notebooks/` — concept walkthroughs
-- `src/<topic>/` — runnable learning scripts; optional `journal/` for dated progress
+- `src/NN-topic/` — runnable learning scripts (same numbering as `docs/notes/` and `notebooks/`); optional `journal/` for dated progress
 - `exercises/` — practice scripts
 - `tests/` — automated checks
 - `datasets/` — small data for examples

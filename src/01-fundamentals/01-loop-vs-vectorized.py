@@ -1,6 +1,6 @@
 """Fundamentals (01): range basics and NumPy vectorized multiplication.
 
-Run as a file, for example: python src/fundamentals/01-loop-vs-vectorized.py
+Run as a file, for example: python src/01-fundamentals/01-loop-vs-vectorized.py
 """
 
 import numpy as np
