@@ -7,3 +7,9 @@ MD060: false
 MD032: false
 MD040: false
 MD036: false
+
+# README uses multiple H1-style sections (author's style).
+MD025: false
+
+# Ordered lists may use explicit 1. 2. 3. numbering.
+MD029: false

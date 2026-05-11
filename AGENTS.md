@@ -18,17 +18,17 @@ Repository agent guidance for automation and AI assistants — **Learn NumPy (20
 
 When your change touches Python under `src/`, `exercises/`, or `tests/`:
 
-1. `uvx ruff check src exercises tests` (use only paths that exist)
-2. `python -m compileall -q src exercises tests`
+- `uvx ruff check src exercises tests` (use only paths that exist)
+- `python -m compileall -q src exercises tests`
 
 When your change touches markdown:
 
-3. `npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "notes/**/*.md"`
-   (omit globs for folders that do not exist yet)
+- `npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "notes/**/*.md"`
+  (omit globs for folders that do not exist yet)
 
 When `tests/` contains tests:
 
-4. `pytest` (or `uv run pytest` if pytest is a project dependency)
+- `pytest` (or `uv run pytest` if pytest is a project dependency)
 
 **Optional:** If you add `tools/psscripts/docs-links.ps1` (Docker-based link checker), run it on
 `README.md` and `docs/` before large doc releases.
