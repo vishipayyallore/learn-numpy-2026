@@ -60,5 +60,5 @@ It is the foundation for numerical work in Python, and learning it early makes l
 
 ## Related Artifacts
 
-- Executable companion: `src/fundamentals/loop_vs_vectorized.py`
+- Executable companion: `src/fundamentals/01-loop-vs-vectorized.py`
 - Next note in this track: `02-why-vectorization-matters.md`

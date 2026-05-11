@@ -69,7 +69,7 @@ When the repo contains Python under `src/`, `exercises/`, or `tests/`:
 
 For markdown:
 
-- `npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "notes/**/*.md"`
+- `npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "notes/**/*.md" "journal/**/*.md"`
   (adjust globs if folders are absent; repo root `README.md` always applies)
 
 Skip commands that do not apply to the files you changed (e.g. no `tests/` yet).

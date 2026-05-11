@@ -23,7 +23,7 @@ When your change touches Python under `src/`, `exercises/`, or `tests/`:
 
 When your change touches markdown:
 
-- `npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "notes/**/*.md"`
+- `npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "notes/**/*.md" "journal/**/*.md"`
   (omit globs for folders that do not exist yet)
 
 When `tests/` contains tests:

@@ -1,6 +1,6 @@
 # Learn Numpy in 2026
 
-> A structured hands-on journey to learn NumPy through notebooks, exercises, experiments, and real-world numerical computing examples.
+> A structured hands-on journey to learn NumPy through notebooks, exercises, topic-organized `src/` scripts, and real-world numerical computing examples.
 
 ---
 
@@ -30,22 +30,25 @@ The goal of this repository is not only to learn NumPy APIs, but also to develop
 
 # Repository Structure
 
-Content is organized in layers so you can answer “where is the idea?” and “where do I run it?” without relying on calendar-style folders.
+Content is organized in layers so you can answer “where is the idea?” and “where do I run it?” without `day1/` / `day2/` folders. **Topics** live in directory names; **order** inside a topic uses `01-`, `02-`, … (or date-prefixed filenames). **Day-to-day progress** is optional but encouraged in `journal/YYYY-MM-DD.md`, which can link to whatever you touched that day.
 
 | Layer | Role |
 | --- | --- |
 | Conceptual | `docs/notes/` — theory, comparisons, summaries (topic folders, co-located `images/` per topic when needed) |
 | Interactive | `notebooks/` — runnable walkthroughs, same topic numbering as notes |
-| Executable | `src/` — small scripts by domain (`fundamentals/`, `experiments/`, `mini_projects/`, `utils/`) |
+| Executable | `src/<topic>/` — runnable scripts (e.g. `01-…py`); run with `python path/to/script.py` (leading digits are for humans, not import paths) |
+| Chronology | `journal/` — dated log of programs run, notes read, and takeaways |
 | Practice | `exercises/` — short drills (`01_` naming when you add scripts) |
 | Reference | `docs/diagrams/`, `docs/cheatsheets/`, repo `README` and external docs |
 | Data | `datasets/` — tiny files for examples |
 | Quality | `tests/` — checks for non-trivial `src/` helpers |
 
-Suggested flow for a new topic: read the matching note under `docs/notes/…`, try the notebook folder, run or extend code under `src/…`, then reinforce in `exercises/`.
+Suggested flow for a new topic: read the matching note under `docs/notes/…`, try the notebook folder, run or extend code under `src/<topic>/…`, optionally append `journal/`, then reinforce in `exercises/`.
 
 ```text
 learn-numpy-2026/
+│
+├── journal/
 │
 ├── docs/
 │   ├── notes/
@@ -65,9 +68,12 @@ learn-numpy-2026/
 │
 ├── src/
 │   ├── fundamentals/
-│   ├── experiments/
-│   ├── mini_projects/
-│   └── utils/
+│   ├── indexing/
+│   ├── broadcasting/
+│   ├── reshape/
+│   ├── statistics/
+│   ├── linear_algebra/
+│   └── performance/
 │
 ├── exercises/
 ├── datasets/
@@ -123,9 +129,10 @@ Optional local intake notes stay out of version control; see `.gitignore` if you
 This repository follows a hybrid learning model:
 
 * `.ipynb` notebooks for interactive exploration
-* `.py` scripts for disciplined coding practice
+* `.py` scripts under `src/<topic>/` for disciplined coding practice (numbered or dated filenames inside each topic)
+* `journal/` entries when you want a dated trail across topics
 * exercises for reinforcement
-* mini-projects for applied learning
+* mini-projects for applied learning (as larger scripts or notebook sequences when you add them)
 
 The emphasis is on:
 
