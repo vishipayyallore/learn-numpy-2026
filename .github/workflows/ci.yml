@@ -42,4 +42,4 @@ jobs:
           node-version: "20"
 
       - name: Markdown lint
-        run: npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" ".github/**/*.md" "journal/**/*.md"
+        run: npx --yes markdownlint-cli2 "README.md" "docs/**/*.md" "notes/**/*.md" ".github/**/*.md" "journal/**/*.md"
