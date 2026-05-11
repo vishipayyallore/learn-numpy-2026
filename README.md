@@ -176,7 +176,8 @@ source .venv/bin/activate
 ## Install Dependencies
 
 ```bash id="r7q64m"
-pip install numpy jupyter matplotlib pandas
+pip install -e ".[dev]"
+pip install jupyter matplotlib pandas
 ```
 
 ---
